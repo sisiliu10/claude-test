@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: social-content
+Version: 0.1.0
+Summary: AI-powered social media content creation CLI
+Requires-Python: >=3.9
+Requires-Dist: anthropic>=0.39.0
+Requires-Dist: click>=8.1.0
+Requires-Dist: rich>=13.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.12; extra == "dev"
