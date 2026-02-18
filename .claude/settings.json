@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_FILE_PATH\" | grep -q 'output/drafts'; then FOUND=$(grep -inwE 'unlock|leverage|game-changer|synergy|groundbreaking|revolutionary|transform|elevate|foster|delve|tapestry|landscape|pivotal|testament|showcase|underscore|crucial|vibrant|nestled|renowned|breathtaking|seamless|cutting-edge|paradigm|holistic|robust|empower|spearhead|beacon|cornerstone|catalyst' \"$CLAUDE_FILE_PATH\"); if [ -n \"$FOUND\" ]; then echo \"BLOCKED: AI buzzwords detected in draft. Rewrite without these words:\"; echo \"$FOUND\"; exit 1; fi; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
